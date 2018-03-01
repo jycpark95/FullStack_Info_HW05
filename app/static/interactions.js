@@ -1,6 +1,5 @@
 $('#submit-survey').on('click', function submitSurvey() {
 	var color = $("input[name=color]").val();
-	console.log(color);
 	var food = $("input[name=food]").val();
 	var vacation = $("input[name=vacation]").val();
 	var feBefore = $("input[name=front-end-before]").val();
