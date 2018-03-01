@@ -24,7 +24,8 @@ def login():
         session['username'] = request.form['name']
         session['email'] = request.form['email']
         return redirect(url_for('index'))
-    return
+    else:
+        return render_template('login.html')
 
 @app.route('/logout')
 def logout():

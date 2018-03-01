@@ -1,37 +1,20 @@
-// $('#submit-survey').on('click', function submitSurvey() {
-// 	var color = $("input[name=color]").val();
-// 	var food = $("input[name=food]").val();
-// 	var vacation = $("input[name=vacation]").val();
-// 	var feBefore = $("input[name=front-end-before]").val();
-// 	var feAfter = $("input[name=front-end-after]").val();
-//
-// 	$.post('/submit-survey', {
-// 		'color':color,
-// 		'food':food,
-// 		'vacation': vacation,
-// 		'feBefore':feBefore,
-// 		'feAfter': feAfter
-// 	}, function(data) {
-// 			$('html').html(data);
-// 		}
-// });
-
 $('#submit-survey').on('click', function submitSurvey() {
 	var color = $("input[name=color]").val();
+	console.log(color);
 	var food = $("input[name=food]").val();
 	var vacation = $("input[name=vacation]").val();
 	var feBefore = $("input[name=front-end-before]").val();
 	var feAfter = $("input[name=front-end-after]").val();
+
 	$.post('/submit-survey', {
-		'color': color,
-		'food': food,
+		'color':color,
+		'food':food,
 		'vacation': vacation,
-		'feBefore': feBefore,
+		'feBefore':feBefore,
 		'feAfter': feAfter
-		}, function(data) {
-			$("html").html(data)
-		}
-	);
+	}, function(data) {
+			$('html').html(data);
+		})
 });
 
 $("#site-title-wrapper").on('click', function goHome() {
